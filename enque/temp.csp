@@ -1,0 +1,72 @@
+<csp:comment>
+USE THIS FOR ENQUE: Make macros to compact below code... This will be converted into the class I call from Enque rule.
+
+Class custom.rg.Enque Extends %RegisteredObject
+{
+
+ClassMethod Tester(element) As %String
+{
+	quit $zstrip($translate(element, $char(9, 10, 13)), "<>W")
+}
+
+}
+</csp:comment>
+
+
+<script language="cache" method="checker" arguments='bar:%String="", el:%String="", def:%Integer=0' returntype="%List" procedureblock="1">
+	
+	set foo = $zstrip($translate(el, $char(9, 10, 13)), "<>W") // Trim leading/trailing spaces; remove horizontal tabs, line feeds and carriage returns.
+	
+	set temp = $System.Encryption.Base64Encode(foo)
+	
+	if ($length(bar)) {
+		
+		set bar = $listbuild(temp)
+		
+		if (def) {
+			
+			write foo
+			
+		} else {
+			
+			write el
+			
+		}
+		
+	} else {
+		
+		if ( ' $listfind(bar, temp)) {
+			
+			set bar = bar _ $listbuild(temp)
+			
+			if (def) {
+				
+				write foo
+				
+			} else {
+				
+				write el
+				
+			}
+			
+		}
+		
+	}
+	
+	quit bar
+	
+</script>
+
+<script language="cache" runat="server">
+	
+	new foo
+	
+	set foo = "ddd"
+	
+	set foo = ..checker($get(foo), "abcdefghijklmnopqrstuvwxyz", 1)
+	
+	write $list(foo) _ ", "
+	
+	kill foo
+	
+</script>
