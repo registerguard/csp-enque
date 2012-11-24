@@ -8,7 +8,7 @@
 ---
 
 ## v1.0.0
-#### November 18, 2012
+#### November 24, 2012
 
 * Initial public release on GitHub.
 
