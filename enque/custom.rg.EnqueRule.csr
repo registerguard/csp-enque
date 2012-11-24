@@ -2,7 +2,23 @@
 	
 	<csr:class super="dt.common.page.Rule" />
 	
-	<csr:description>...</csr:description>
+	<csr:description>
+		
+		<h1>custom.rg.EnqueRule</h1>
+		
+		<ul>
+			<li>Version: v1.0.0</li>
+			<li>Date: Monday, November 24, 2012</li>
+			<li>Docs: <a href="https://github.com/registerguard/csp-enque">https://github.com/registerguard/csp-enque</a></li>
+		</ul>
+		
+		<p>
+			The <code>&lt;custom:rg:enque&gt;</code> Add HTML to document <code>&gt;head&lt;</code>.
+			<br>
+			Add attribute <code>uglify</code> to "uglify" the HTML.
+		</p>
+		
+	</csr:description>
 	
 	<csr:action>
 		
@@ -12,63 +28,13 @@
 		
 		<csr:section name="HEAD">
 			
-			<script language="cache" runat="server">
-				
-				new foo, temp
-				
-				set foo = $zstrip($translate(##'..InnerText()'##, $char(9, 10, 13)), "<>W") // Trim leading/trailing spaces; remove horizontal tabs, line feeds and carriage returns.
-				
-				set temp = $System.Encryption.Base64Encode(foo)
-				
-				if ( ' $data(x)) {
-					
-					new x
-					
-					set x = $listbuild(temp)
-					
-					if (##'..IsDefined("uglify")'##) {
-						
-						write foo
-						
-					} else {
-						
-						write ##'..InnerText()'##
-						
-					}
-					
-				} else {
-					
-					if ( ' $listfind(x, temp)) {
-						
-						set x = x _ $listbuild(temp)
-						
-						if (##'..IsDefined("uglify")'##) {
-							
-							write foo
-							
-						} else {
-							
-							write ##'..InnerText()'##
-							
-						}
-						
-					}
-					
-				}
-				
-				kill foo, temp
-				
-			</script>
+			#[ new:( ' $data(enque)) enque set enque = ##class(custom.rg.Enque).html($get(enque), ##'..InnerText()'##, ##'..IsDefined("uglify")'##) ]#
 			
 		</csr:section>
 		
 		<csr:section name="POSTHTML">
 			
-			<script language="cache" runat="server">
-				
-				kill:($data(x)) x // Needed?
-				
-			</script>
+			#[ kill:($data(enque)) enque ]#
 			
 		</csr:section>
 		
@@ -84,7 +50,23 @@
 	
 	<csr:class super="dt.common.page.Rule" />
 	
-	<csr:description>...</csr:description>
+	<csr:description>
+		
+		<h1>custom.rg.EnqueBodyRule</h1>
+		
+		<ul>
+			<li>Version: v1.0.0</li>
+			<li>Date: Monday, November 24, 2012</li>
+			<li>Docs: <a href="https://github.com/registerguard/csp-enque">https://github.com/registerguard/csp-enque</a></li>
+		</ul>
+		
+		<p>
+			The <code>&lt;custom:rg:enque:body&gt;</code> Add HTML to document <code>&gt;body&lt;</code>.
+			<br>
+			Add attribute <code>uglify</code> to "uglify" the HTML.
+		</p>
+		
+	</csr:description>
 	
 	<csr:action>
 		
@@ -94,61 +76,13 @@
 		
 		<csr:section name="BODY" block="2">
 			
-			<script language="cache" runat="server">
-				
-				set foo = $zstrip($translate(##'..InnerText()'##, $char(9, 10, 13)), "<>W") // Trim leading/trailing spaces; remove horizontal tabs, line feeds and carriage returns.
-				
-				set temp = $System.Encryption.Base64Encode(foo)
-				
-				if ( ' $data(x)) {
-					
-					new x
-					
-					set x = $listbuild(temp)
-					
-					if (##'..IsDefined("uglify")'##) {
-						
-						write foo
-						
-					} else {
-						
-						write ##'..InnerText()'##
-						
-					}
-					
-				} else {
-					
-					if ( ' $listfind(x, temp)) {
-						
-						set x = x _ $listbuild(temp)
-						
-						if (##'..IsDefined("uglify")'##) {
-							
-							write foo
-							
-						} else {
-							
-							write ##'..InnerText()'##
-							
-						}
-						
-					}
-					
-				}
-				
-				kill foo, temp
-				
-			</script>
+			#[ new:( ' $data(enque)) enque set enque = ##class(custom.rg.Enque).html($get(enque), ##'..InnerText()'##, ##'..IsDefined("uglify")'##) ]#
 			
 		</csr:section>
 		
 		<csr:section name="POSTHTML">
 			
-			<script language="cache" runat="server">
-				
-				kill:($data(x)) x // Needed?
-				
-			</script>
+			#[ kill:($data(enque)) enque ]#
 			
 		</csr:section>
 		
