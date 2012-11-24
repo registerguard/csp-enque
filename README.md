@@ -2,6 +2,8 @@
 
 ### Enque: A Caché RULE (a.k.a tag) that injects HTML into the <head> or foot of an HTML document.
 
+Inspired by WordPress' [`wp_enqueue_script()`](http://codex.wordpress.org/Function_Reference/wp_enqueue_script).
+
 ---
 
 #### EXAMPLES
@@ -113,7 +115,7 @@ After:
 </html>
 ```
 
-See `[test.csp](https://github.com/registerguard/csp-enque/blob/master/enque/test.csp)` for a complete example.
+See [`test.csp`](https://github.com/registerguard/csp-enque/blob/master/enque/test.csp) for a complete example.
 
 ---
 
