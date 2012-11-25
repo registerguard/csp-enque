@@ -1,6 +1,6 @@
 # CSP Enque
 
-### Enque: A Caché RULE (a.k.a tag) that injects HTML into the <head> or foot of an HTML document.
+### Enque: A Caché RULE (aka CSP tag) that injects HTML into the `<head>` or foot of an HTML document.
 
 Inspired by WordPress' [`wp_enqueue_script()`](http://codex.wordpress.org/Function_Reference/wp_enqueue_script).
 
@@ -112,7 +112,7 @@ Inspired by WordPress' [`wp_enqueue_script()`](http://codex.wordpress.org/Functi
 </html>
 ```
 
-See [`test.csp`](https://github.com/registerguard/csp-enque/blob/master/enque/test.csp) for another example.
+See also: [`test.csp`](https://github.com/registerguard/csp-enque/blob/master/enque/test.csp).
 
 ---
 
@@ -139,13 +139,17 @@ There's a couple ways (that I can think of) to install this code:
 2. Open Studio.
 3. Change to the `CMS` namespace.
 4. "Tools" >> "Import Local...".
-5. Import `ccustom.rg.Enque.xml`, `custom.rg.EnqueRule.csr` and check the compile box.
+5. Import `custom.rg.Enque.xml`, `custom.rg.EnqueRule.csr` and check the compile box.
 
 ---
 
 #### NOTES:
 
 To non-[DTI](http://www.dtint.com/) customers, remove these lines from `custom.rg.EnqueRule.csr`:
+
+```
+<csr:class super="dt.common.page.Rule" />
+```
 
 ```
 <script language="cache" runat="compiler">
@@ -157,10 +161,6 @@ To non-[DTI](http://www.dtint.com/) customers, remove these lines from `custom.r
 <script language="cache" runat="compiler">
 	do ##this.RenderDTEndTag()
 </script>
-```
-
-```
-<csr:class super="dt.common.page.Rule" />
 ```
 
 ---
