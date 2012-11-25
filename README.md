@@ -8,7 +8,7 @@ Inspired by WordPress' [`wp_enqueue_script()`](http://codex.wordpress.org/Functi
 
 #### EXAMPLES
 
-Before:
+**Before:**
 
 ```html
 <!doctype html>
@@ -46,15 +46,12 @@ Before:
 </html>
 ```
 
-After:
+**After:**
+
 ```html
 <!doctype html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>Testing enque</title>
-	<meta name="description" content="">
-	<meta name="keywords" content="">
 </head>
 <body>
 
@@ -68,7 +65,9 @@ After:
 </html>
 ```
 
-Before:
+--
+
+**Before:**
 
 ```html
 <!doctype html>
@@ -93,7 +92,7 @@ Before:
 </html>
 ```
 
-After:
+**After:**
 
 ```html
 <!doctype html>
@@ -115,7 +114,9 @@ After:
 </html>
 ```
 
-See [`test.csp`](https://github.com/registerguard/csp-enque/blob/master/enque/test.csp) for a complete example.
+--
+
+See [`test.csp`](https://github.com/registerguard/csp-enque/blob/master/enque/test.csp) for another example.
 
 ---
 
