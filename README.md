@@ -65,8 +65,6 @@ Inspired by WordPress' [`wp_enqueue_script()`](http://codex.wordpress.org/Functi
 </html>
 ```
 
---
-
 **Before:**
 
 ```html
@@ -113,8 +111,6 @@ Inspired by WordPress' [`wp_enqueue_script()`](http://codex.wordpress.org/Functi
 </body>
 </html>
 ```
-
---
 
 See [`test.csp`](https://github.com/registerguard/csp-enque/blob/master/enque/test.csp) for another example.
 
