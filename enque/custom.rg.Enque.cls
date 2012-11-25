@@ -43,7 +43,7 @@ ClassMethod html(
 				set list = list _ $listbuild(encoded)
 				
 				; Write the uglified or non-uglified HTML:
-				write $case(uglify, 1:ugly, :string)
+				write $case(uglify, 1:ugly, :string), !
 				
 			}
 			
@@ -53,7 +53,7 @@ ClassMethod html(
 			set list = $listbuild(encoded)
 			
 			; Write the uglified or non-uglified HTML:
-			write $case(uglify, 1:ugly, :string)
+			write $case(uglify, 1:ugly, :string), !
 			
 		}
 		

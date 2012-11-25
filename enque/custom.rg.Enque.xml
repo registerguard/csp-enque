@@ -48,7 +48,7 @@ The <method>html</method> ClassMethod outputs <code>string</code> if it has not 
 				set list = list _ $listbuild(encoded)
 				
 				; Write the uglified or non-uglified HTML:
-				write $case(uglify, 1:ugly, :string)
+				write $case(uglify, 1:ugly, :string), !
 				
 			}
 			
@@ -58,7 +58,7 @@ The <method>html</method> ClassMethod outputs <code>string</code> if it has not 
 			set list = $listbuild(encoded)
 			
 			; Write the uglified or non-uglified HTML:
-			write $case(uglify, 1:ugly, :string)
+			write $case(uglify, 1:ugly, :string), !
 			
 		}
 		
