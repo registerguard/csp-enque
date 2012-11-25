@@ -112,7 +112,7 @@ Inspired by WordPress' [`wp_enqueue_script()`](http://codex.wordpress.org/Functi
 </html>
 ```
 
-See also: [`test.csp`](https://github.com/registerguard/csp-enque/blob/master/enque/test.csp).
+**See also:** [`test.csp`](https://github.com/registerguard/csp-enque/blob/master/enque/test.csp).
 
 ---
 
@@ -145,7 +145,7 @@ There's a couple ways (that I can think of) to install this code:
 
 #### NOTES:
 
-To non-[DTI](http://www.dtint.com/) customers, remove these lines from `custom.rg.EnqueRule.csr`:
+Non-[DTI](http://www.dtint.com/) customers should emove these lines from `custom.rg.debug.WriteRule.csr`:
 
 ```
 <csr:class super="dt.common.page.Rule" />
