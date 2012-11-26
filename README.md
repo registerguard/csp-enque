@@ -59,7 +59,6 @@ Both `head` and `body` attributes accept a numeric value which is used to relati
 <head>
 </head>
 <body>
-
 <custom:rg:enque body uglify>
 	<script type="text/javascript" src="http://rgweb.slideshowpro.com/m/embed.js"></script>
 	<script type="text/javascript">
@@ -84,7 +83,6 @@ Both `head` and `body` attributes accept a numeric value which is used to relati
 </custom:rg:enque>
 <div id="album-363953"></div>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lobortis elit dapibus eros ornare et venenatis turpis fermentum. Integer dictum, ipsum a dapibus gravida, arcu lorem blandit eros, sit amet commodo est sapien in velit. In hac habitasse platea dictumst. Sed lorem tortor, cursus accumsan iaculis sit amet, gravida eu nisl. Suspendisse potenti. Quisque in bibendum mauris. Pellentesque aliquet, velit eu congue placerat, metus nibh ornare neque, et lacinia libero odio at nunc. Curabitur lobortis consequat purus nec vulputate. Integer condimentum ullamcorper dictum. Nam eget nulla tortor. In eros nisl, lacinia ac ultrices ac, pulvinar vitae mi. Sed luctus, ipsum eu mollis venenatis, massa leo hendrerit elit, non dignissim lorem risus at quam. Curabitur cursus tincidunt nibh, at egestas nisl tempus ut. Cras condimentum dui a leo sodales vehicula.</p>
-
 </body>
 </html>
 ```
@@ -97,13 +95,9 @@ Both `head` and `body` attributes accept a numeric value which is used to relati
 <head>
 </head>
 <body>
-
 <div id="album-363953"></div>
-
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lobortis elit dapibus eros ornare et venenatis turpis fermentum. Integer dictum, ipsum a dapibus gravida, arcu lorem blandit eros, sit amet commodo est sapien in velit. In hac habitasse platea dictumst. Sed lorem tortor, cursus accumsan iaculis sit amet, gravida eu nisl. Suspendisse potenti. Quisque in bibendum mauris. Pellentesque aliquet, velit eu congue placerat, metus nibh ornare neque, et lacinia libero odio at nunc. Curabitur lobortis consequat purus nec vulputate. Integer condimentum ullamcorper dictum. Nam eget nulla tortor. In eros nisl, lacinia ac ultrices ac, pulvinar vitae mi. Sed luctus, ipsum eu mollis venenatis, massa leo hendrerit elit, non dignissim lorem risus at quam. Curabitur cursus tincidunt nibh, at egestas nisl tempus ut. Cras condimentum dui a leo sodales vehicula.</p>
-
 <script type="text/javascript" src="http://rgweb.slideshowpro.com/m/embed.js"></script><script type="text/javascript">SlideShowPro({attributes: {id: "album-363953",width: 550,height: 400},mobile: {auto: false},params: {bgcolor: "#000000",allowfullscreen: true},flashvars: {xmlFilePath: "http://rgweb.slideshowpro.com/images.php?album=363953"}});</script>
-
 </body>
 </html>
 ```
