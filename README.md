@@ -8,8 +8,8 @@ Inspired by WordPress' [`wp_enqueue_script()`](http://codex.wordpress.org/Functi
 
 #### TAGS:
 
-1. `<head>`: <custom:rg:enque>...</custom:rg:enque>
-2. `<body>`: <custom:rg:enque:body>...</custom:rg:enque:body>
+1. `<head>`: `<custom:rg:enque>`...`</custom:rg:enque>`
+2. `<body>`: `<custom:rg:enque:body>`...`</custom:rg:enque:body>`
 
 ---
 
