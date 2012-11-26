@@ -73,7 +73,7 @@
 					kill encoded
 					
 					; Undefine:
-					#undef which
+					#undef WHICH
 					
 				}
 				
