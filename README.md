@@ -1,8 +1,15 @@
-# CSP Enque
+# Enque
 
-### Enque: A Caché RULE (aka CSP tag) that injects HTML into the `<head>` or `<body>` of an HTML document.
+### Caché [RULE](http://docs.intersystems.com/cache20091/csp/docbook/DocBook.UI.Page.cls?KEY=GCSP_customtags)s (aka `csp` tags) that inject `html` into the `<head>` or `<body>` of an `html` document.
 
 Inspired by WordPress' [`wp_enqueue_script()`](http://codex.wordpress.org/Function_Reference/wp_enqueue_script).
+
+---
+
+#### TAGS:
+
+1. `<head>`: <custom:rg:enque>...</custom:rg:enque>
+2. `<body>`: <custom:rg:enque:body>...</custom:rg:enque:body>
 
 ---
 
