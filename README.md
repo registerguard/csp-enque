@@ -8,9 +8,9 @@ Inspired by WordPress' [`wp_enqueue_script()`](http://codex.wordpress.org/Functi
 
 #### ATTRIBUTES
 
-Applies to both tags, and both are optional:
+These (optional) attributes apply to both tags:
 
-1. `position`: Relative position in section. Default is 0. Negative is beginning of section or positive is end of section.
+1. `position`: Relative position in [section](http://docs.intersystems.com/cache20091/csp/docbook/DocBook.UI.Page.cls?KEY=RCSP_CSP_SECTION). Default is `0`. Negative is beginning of section or positive is end of section.
 2. `uglify`: Trim leading/trailing spaces; remove horizontal tabs, line feeds and carriage returns. This attribute doesn't (currently) take any arguments.
 
 ---
