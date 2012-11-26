@@ -8,15 +8,20 @@
 ---
 
 ## v2.0.0
-#### November 25, 2012
+#### November 26, 2012
 
 * New version number (`2.0.0`)
 * Simplified code so that one tag can do all of the work.
+	* Added `head` attribute.
+	* The `body` part of the tag has been moved into its own attribute.
+	* Both the `head` and `body` attributes accept a numeric value to relatively position content within the section. 
 * Removed `custom.rg.Enque.cls` and `custom.rg.Enque.xml`.
 * Updated `README.md`.
 * Updated `CHANGELOG.md` (this file).
-* ... 
-
+* Removed all documentation from `RULE` file.
+	* It's easier to maintain docs in on centralized location.
+* Added `FEATURES` section to `README.md`.
+* Addd more `USAGE` examples.
 
 ---
 

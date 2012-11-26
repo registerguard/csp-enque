@@ -1,15 +1,37 @@
 # Enque
 
-### The `<custom:rg:enque>` [RULE](http://docs.intersystems.com/cache20091/csp/docbook/DocBook.UI.Page.cls?KEY=GCSP_customtags) (aka csp tag) inserts the content contained in the start and end tags into the `<head>` or `<body>` of the document.
+### The `<custom:rg:enque>` [RULE](http://docs.intersystems.com/cache20091/csp/docbook/DocBook.UI.Page.cls?KEY=GCSP_customtags) inserts the content contained in the start and end tags into the `<head>` or `<body>` of the document.
 
 Inspired by WordPress' [`wp_enqueue_script()`](http://codex.wordpress.org/Function_Reference/wp_enqueue_script).
 
 ---
 
-#### USAGE:
+#### FEATURES
 
-1. Insert `...CONTENT...` into `<head>`: `<custom:rg:enque>...CONTENT...</custom:rg:enque>`.
-2. Insert `...CONTENT...` into `<body>`: `<custom:rg:enque body>...CONTENT...</custom:rg:enque>`.
+* Prevents duplicate content from being inserted into a section.
+* Ability to control the positioning of content using a numeric value.
+
+---
+
+#### USAGE
+
+Insert `...CONTENT...` into `<head>` right before the closing `</head>` tag:
+
+```html
+<custom:rg:enque>...CONTENT...</custom:rg:enque>
+```
+
+Insert `...CONTENT...` into `<body>` right before the closing `</body>` tag:
+
+```html
+<custom:rg:enque body>...CONTENT...</custom:rg:enque>
+```
+
+Insert `...CONTENT...` into `<body>` right after the opening `<body>` tag:
+
+```html
+<custom:rg:enque body="-1">...CONTENT...</custom:rg:enque>
+```
 
 ---
 
@@ -23,7 +45,7 @@ If both `head` and `body` attributes aren't defined, then attribute `head` is us
 
 Both `head` and `body` attributes accept a numeric value which is used to relatively position the content within the [section](http://docs.intersystems.com/cache20091/csp/docbook/DocBook.UI.Page.cls?KEY=RCSP_CSP_SECTION); a negative number is the beginning of a section and a positive number is the end of a section. The default value is `1`.
 
-**Note:** This `uglify` attribute doesn't (currently) take any arguments.
+**Note:** The `uglify` attribute doesn't (currently) take any arguments.
 
 ---
 
@@ -152,7 +174,7 @@ For us DTI customers, there's a couple ways (that I can think of) to install thi
 
 ---
 
-#### NOTES:
+#### NOTES
 
 Non-[DTI](http://www.dtint.com/) customers should emove these lines from `custom.rg.EnqueRule.csr`:
 

@@ -4,16 +4,6 @@
 	
 	<csr:description>
 		
-		<p>
-			The <code>&lt;custom:rg:enque&gt;</code> RULE (aka csp tag) inserts the content contained in the start and end tags into the <code>&gt;head&lt;</code> or <code>&gt;body&lt;</code> of the document.
-			<br>
-			If both <code>head</code> and <code>body</code> attributes aren't defined, then attribute </code>head</code> is used by default.
-			<br>
-			Both <code>head</code> and <code>body</code> attributes accept a numeric value which is used to relatively position the content within the section; a negative number is the beginning of a section and a positive number is the end of a section. The default value is <code>1</code>.
-			<br>
-			<b>Note:</b> The `uglify` attribute doesn't (currently) take any arguments.
-		</p>
-		
 		<ul>
 			<li>Version: v2.0.0</li>
 			<li>Date: Monday, November 25, 2012</li>
