@@ -37,8 +37,8 @@ Insert `...CONTENT...` into `<body>` right after the opening `<body>` tag:
 
 #### ATTRIBUTES
 
-1. `head`: Insert content into the `<head>`; of the document.
-2. `body`: Insert content into the `<body>`; of the document.
+1. `head`: Insert content into the `<head>` of the document.
+2. `body`: Insert content into the `<body>` of the document.
 3. `uglify`: Trim leading/trailing spaces; remove horizontal tabs, line feeds and carriage returns.
 
 If both `head` and `body` attributes aren't defined, then attribute `head` is used by default.
