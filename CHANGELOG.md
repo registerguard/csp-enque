@@ -22,6 +22,7 @@
 	* It's easier to maintain docs in on centralized location.
 * Added `FEATURES` section to `README.md`.
 * Addd more `USAGE` examples.
+* Added debug info to `test.csp`.
 
 ---
 
