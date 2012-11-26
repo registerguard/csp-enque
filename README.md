@@ -196,6 +196,13 @@ Non-[DTI](http://www.dtint.com/) customers should emove these lines from `custom
 
 ---
 
+#### DISCUSSION(S)
+
+* [[RULE] How to track, and compare, previous RULE matches to the current RULE match?](https://groups.google.com/d/topic/intersystems-public-cache/kZ5CJdjSuQU/discussion)
+* [In need of CSR rule advice](https://groups.google.com/d/topic/intersystems-public-cache/rhaOntJQWGA/discussion) 
+
+---
+
 #### LEGAL
 
 Copyright © 2012 [Micky Hulse](http://hulse.me)/[The Register-Guard](http://www.registerguard.com)
