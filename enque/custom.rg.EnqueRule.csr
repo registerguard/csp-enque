@@ -12,13 +12,12 @@
 			<li>Docs: <a href="https://github.com/registerguard/csp-enque">https://github.com/registerguard/csp-enque</a></li>
 		</ul>
 		
-		<p>
-			The <code>&lt;custom:rg:enque&gt;</code> Add HTML to document <code>&gt;head&lt;</code>.
-			<br>
-			Add attribute <code>uglify</code> to "uglify" the HTML.
-		</p>
+		<p>The <code>&lt;custom:rg:enque&gt;</code> adds HTML to the document <code>&gt;head&lt;</code>.</p>
 		
 	</csr:description>
+	
+	<csr:attribute name="position" description="Relative position in section. Default is 0. Negative is beginning of section or positive is end of section."                                   type="position:NUMBER" />
+	<csr:attribute name="uglify"   description="Trim leading/trailing spaces; remove horizontal tabs, line feeds and carriage returns. This attribute doesn't (currently) take any arguments." type="uglify:BOOLEAN"  />
 	
 	<csr:action>
 		
@@ -26,7 +25,7 @@
 			do ##this.RenderDTStartTag()
 		</script>
 		
-		<csr:section name="HEAD">
+		<csr:section name="HEAD" block="##(##this.GetAttribute("position"))##">
 			
 			#[ new:( ' $data(enque)) enque set enque = ##class(custom.rg.Enque).html($get(enque), ##'..InnerText()'##, ##'..IsDefined("uglify")'##) ]#
 			
@@ -60,13 +59,12 @@
 			<li>Docs: <a href="https://github.com/registerguard/csp-enque">https://github.com/registerguard/csp-enque</a></li>
 		</ul>
 		
-		<p>
-			The <code>&lt;custom:rg:enque:body&gt;</code> Add HTML to document <code>&gt;body&lt;</code>.
-			<br>
-			Add attribute <code>uglify</code> to "uglify" the HTML.
-		</p>
+		<p>The <code>&lt;custom:rg:enque:body&gt;</code> adds HTML to the document <code>&gt;body&lt;</code>.</p>
 		
 	</csr:description>
+	
+	<csr:attribute name="position" description="Relative position in section. Default is 0. Negative is beginning of section or positive is end of section."                                   type="position:NUMBER" />
+	<csr:attribute name="uglify"   description="Trim leading/trailing spaces; remove horizontal tabs, line feeds and carriage returns. This attribute doesn't (currently) take any arguments." type="uglify:BOOLEAN"  />
 	
 	<csr:action>
 		
@@ -74,7 +72,7 @@
 			do ##this.RenderDTStartTag()
 		</script>
 		
-		<csr:section name="BODY" block="2">
+		<csr:section name="BODY" block="##(##this.GetAttribute("position", 2))##">
 			
 			#[ new:( ' $data(enque)) enque set enque = ##class(custom.rg.Enque).html($get(enque), ##'..InnerText()'##, ##'..IsDefined("uglify")'##) ]#
 			

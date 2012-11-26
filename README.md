@@ -1,8 +1,17 @@
 # CSP Enque
 
-### Enque: A Caché RULE (aka CSP tag) that injects HTML into the `<head>` or foot of an HTML document.
+### Enque: A Caché RULE (aka CSP tag) that injects HTML into the `<head>` or `<body>` of an HTML document.
 
 Inspired by WordPress' [`wp_enqueue_script()`](http://codex.wordpress.org/Function_Reference/wp_enqueue_script).
+
+---
+
+#### ATTRIBUTES
+
+Applies to both tags, and both are optional:
+
+1. `position`: Relative position in section. Default is 0. Negative is beginning of section or positive is end of section.
+2. `uglify`: Trim leading/trailing spaces; remove horizontal tabs, line feeds and carriage returns. This attribute doesn't (currently) take any arguments.
 
 ---
 
