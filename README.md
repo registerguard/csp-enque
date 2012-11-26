@@ -1,24 +1,29 @@
 # Enque
 
-### Caché [RULE](http://docs.intersystems.com/cache20091/csp/docbook/DocBook.UI.Page.cls?KEY=GCSP_customtags)s (aka `csp` tags) that inject `html` into the `<head>` or `<body>` of an `html` document.
+### The `<custom:rg:enque>` [RULE](http://docs.intersystems.com/cache20091/csp/docbook/DocBook.UI.Page.cls?KEY=GCSP_customtags) (aka csp tag) inserts the content contained in the start and end tags into the `<head>` or `<body>` of the document.
 
 Inspired by WordPress' [`wp_enqueue_script()`](http://codex.wordpress.org/Function_Reference/wp_enqueue_script).
 
 ---
 
-#### TAGS:
+#### USAGE:
 
-1. `<head>`: `<custom:rg:enque>`...`</custom:rg:enque>`
-2. `<body>`: `<custom:rg:enque:body>`...`</custom:rg:enque:body>`
+1. Insert `...CONTENT...` into `<head>`: `<custom:rg:enque>...CONTENT...</custom:rg:enque>`.
+2. Insert `...CONTENT...` into `<body>`: `<custom:rg:enque body>...CONTENT...</custom:rg:enque>`.
 
 ---
 
 #### ATTRIBUTES
 
-These (optional) attributes apply to both tags:
+1. `head`: Insert content into the `<head>`; of the document.
+2. `body`: Insert content into the `<body>`; of the document.
+3. `uglify`: Trim leading/trailing spaces; remove horizontal tabs, line feeds and carriage returns.
 
-1. `position`: Relative position in [section](http://docs.intersystems.com/cache20091/csp/docbook/DocBook.UI.Page.cls?KEY=RCSP_CSP_SECTION). Default is `0`. Negative is beginning of section or positive is end of section.
-2. `uglify`: Trim leading/trailing spaces; remove horizontal tabs, line feeds and carriage returns. This attribute doesn't (currently) take any arguments.
+If both `head` and `body` attributes aren't defined, then attribute `head` is used by default.
+
+Both `head` and `body` attributes accept a numeric value which is used to relatively position the content within the [section](http://docs.intersystems.com/cache20091/csp/docbook/DocBook.UI.Page.cls?KEY=RCSP_CSP_SECTION); a negative number is the beginning of a section and a positive number is the end of a section. The default value is `1`.
+
+**Note:** This `uglify` attribute doesn't (currently) take any arguments.
 
 ---
 
@@ -33,7 +38,7 @@ These (optional) attributes apply to both tags:
 </head>
 <body>
 
-<custom:rg:enque:body uglify>
+<custom:rg:enque body uglify>
 	<script type="text/javascript" src="http://rgweb.slideshowpro.com/m/embed.js"></script>
 	<script type="text/javascript">
 		SlideShowPro({
@@ -54,7 +59,7 @@ These (optional) attributes apply to both tags:
 			}
 		});
 	</script>
-</custom:rg:enque:body>
+</custom:rg:enque>
 <div id="album-363953"></div>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lobortis elit dapibus eros ornare et venenatis turpis fermentum. Integer dictum, ipsum a dapibus gravida, arcu lorem blandit eros, sit amet commodo est sapien in velit. In hac habitasse platea dictumst. Sed lorem tortor, cursus accumsan iaculis sit amet, gravida eu nisl. Suspendisse potenti. Quisque in bibendum mauris. Pellentesque aliquet, velit eu congue placerat, metus nibh ornare neque, et lacinia libero odio at nunc. Curabitur lobortis consequat purus nec vulputate. Integer condimentum ullamcorper dictum. Nam eget nulla tortor. In eros nisl, lacinia ac ultrices ac, pulvinar vitae mi. Sed luctus, ipsum eu mollis venenatis, massa leo hendrerit elit, non dignissim lorem risus at quam. Curabitur cursus tincidunt nibh, at egestas nisl tempus ut. Cras condimentum dui a leo sodales vehicula.</p>
 
@@ -93,15 +98,12 @@ These (optional) attributes apply to both tags:
 <meta name="keywords" content="">
 </head>
 <body>
-
 <custom:rg:enque><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script></custom:rg:enque>
 <custom:rg:enque><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script></custom:rg:enque>
 <custom:rg:enque><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script></custom:rg:enque>
-<custom:rg:enque:body><script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js"></script></custom:rg:enque:body>
-<custom:rg:enque:body><script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js"></script></custom:rg:enque:body>
-
+<custom:rg:enque body><script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js"></script></custom:rg:enque>
+<custom:rg:enque body><script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js"></script></custom:rg:enque>
 <p>Ut a urna non lectus fermentum molestie id a sapien. Donec non dictum nulla. Aliquam gravida eleifend nisl sed consectetur. Pellentesque et varius neque. Aliquam eu eros est. Proin sed nibh nec neque adipiscing lacinia et eu ante. Suspendisse porta vehicula orci sit amet posuere. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse euismod ipsum at eros fringilla elementum. Quisque eu leo arcu, tempus sodales tellus. Phasellus eleifend arcu ac est volutpat aliquam. Donec egestas, tortor eu mollis iaculis, est metus commodo mi, non semper enim metus dignissim augue. Sed auctor sollicitudin purus, id volutpat risus iaculis vitae. Suspendisse sodales tristique vestibulum. Nam purus turpis, convallis at consequat a, malesuada eu orci. Sed euismod posuere augue a scelerisque.</p>
-
 </body>
 </html>
 ```
@@ -119,11 +121,8 @@ These (optional) attributes apply to both tags:
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 </head>
 <body>
-
 <p>Ut a urna non lectus fermentum molestie id a sapien. Donec non dictum nulla. Aliquam gravida eleifend nisl sed consectetur. Pellentesque et varius neque. Aliquam eu eros est. Proin sed nibh nec neque adipiscing lacinia et eu ante. Suspendisse porta vehicula orci sit amet posuere. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse euismod ipsum at eros fringilla elementum. Quisque eu leo arcu, tempus sodales tellus. Phasellus eleifend arcu ac est volutpat aliquam. Donec egestas, tortor eu mollis iaculis, est metus commodo mi, non semper enim metus dignissim augue. Sed auctor sollicitudin purus, id volutpat risus iaculis vitae. Suspendisse sodales tristique vestibulum. Nam purus turpis, convallis at consequat a, malesuada eu orci. Sed euismod posuere augue a scelerisque.</p>
-
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js"></script>
-
 </body>
 </html>
 ```
@@ -134,18 +133,12 @@ These (optional) attributes apply to both tags:
 
 #### INSTALLATION
 
-There's a couple ways (that I can think of) to install this code:
+For us DTI customers, there's a couple ways (that I can think of) to install this code:
 
 ### Copy/paste:
 
-1. Open Studio.
-2. Change to the `CMS` namespace.
-3. "File" >> "New..." and choose "Caché Class Definition" from "General" tab.
-4. Copy/paste the **RAW** contents `custom.rg.Enque.cls` into this new file.
-5. Save this file as `custom.rg.Enque.cls` to your `custom` package, in a sub package called `rg`.
-6. Compile.
-7. "File" >> "New..." and choose "Caché Server Page" from "CSP File" tab.
-8. Copy/paste the **RAW** contents of `custom.rg.GetStoriesRule.csr` into this new file.
+1. "File" >> "New..." and choose "Caché Server Page" from "CSP File" tab.
+2. Copy/paste the **RAW** contents of `custom.rg.EnqueRule.csr` into this new file.
 9. Save this file as `custom.rg.EnqueRule.csr` to the "CSP Files" >> `/csp/cms/customrules` package/folder/location.
 10. Compile.
 
@@ -155,13 +148,13 @@ There's a couple ways (that I can think of) to install this code:
 2. Open Studio.
 3. Change to the `CMS` namespace.
 4. "Tools" >> "Import Local...".
-5. Import `custom.rg.Enque.xml`, `custom.rg.EnqueRule.csr` and check the compile box.
+5. Import `custom.rg.EnqueRule.csr` and check the compile box.
 
 ---
 
 #### NOTES:
 
-Non-[DTI](http://www.dtint.com/) customers should emove these lines from `custom.rg.debug.WriteRule.csr`:
+Non-[DTI](http://www.dtint.com/) customers should emove these lines from `custom.rg.EnqueRule.csr`:
 
 ```
 <csr:class super="dt.common.page.Rule" />
